@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Clinic Capacity Report - Unit 3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f8fafc;
+        }
+        .gov-header {
+            background-color: #1e293b;
+            border-bottom: 4px solid #3b82f6;
+        }
+        .seal-placeholder {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8rem;
+            text-align: center;
+            border: 2px solid #fff;
+        }
+        .section-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            transition: transform 0.2s;
+        }
+        .section-card:hover {
+            transform: translateY(-2px);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+        }
+        .tag-growth { background-color: #dcfce7; color: #166534; }
+        .tag-stagnant { background-color: #fef9c3; color: #854d0e; }
+        .tag-decline { background-color: #fee2e2; color: #991b1b; }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Official Banner -->
+    <header class="gov-header text-white p-4 shadow-lg">
+        <div class="max-w-5xl mx-auto flex items-center space-x-4">
+            <div class="seal-placeholder">OFFICIAL REPORT</div>
+            <div>
+                <h1 class="text-xl md:text-2xl font-bold tracking-tight uppercase">Department of Regional Health & Planning</h1>
+                <p class="text-sm text-blue-300">Criterion B and C Formative Assessment | Unit 3: Linear Relations</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto p-6 space-y-8">
+        
+        <!-- Scenario Introduction -->
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+            <h2 class="text-2xl font-bold text-blue-900 mb-2">Task 1: The Health Clinic Comparison</h2>
+            <p class="text-lg leading-relaxed">
+                <strong>Situation Report:</strong> Three neighboring regions are tracking their capacity to provide health clinic appointments. 
+                Data is measured in <strong>hundreds of available slots</strong> over a period of 4 months. As a data analyst, you must evaluate the trends for each neighborhood.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8">
+            
+            <!-- Neighborhood A -->
+            <section class="section-card p-6 border-t-4 border-green-500">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-slate-700">Neighborhood A: Progressive Growth</h3>
+                    <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tag-growth">Priority: Expanding</span>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <p class="mb-4 text-slate-600">Initial data suggests a steady increase in resources. Complete the model below based on the provided data table.</p>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-dashed border-slate-300 text-center mb-4">
+                            <span class="text-slate-500 italic">Model:</span> 
+                            <span class="font-mono text-xl ml-2">$y = 2x + 10$</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-sm">
+                            <span class="font-semibold">Mathematical Feature:</span>
+                            <span class="text-green-700">Positive Rate of Change (Slope = 2)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overflow-x-auto">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Month (x)</th>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-green-50">
+                                    <th>Slots (y)</th>
+                                    <td>10</td>
+                                    <td>12</td>
+                                    <td>14</td>
+                                    <td>16</td>
+                                    <td>18</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Neighborhood B -->
+            <section class="section-card p-6 border-t-4 border-yellow-500">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-slate-700">Neighborhood B: Stagnant Access</h3>
+                    <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tag-stagnant">Priority: Watch List</span>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <p class="mb-4 text-slate-600">The capacity in this region remains unchanged throughout the reporting period.</p>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-dashed border-slate-300 text-center mb-4">
+                            <span class="text-slate-500 italic">Model:</span> 
+                            <span class="font-mono text-xl ml-2">$y = 10$</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-sm">
+                            <span class="font-semibold">Mathematical Feature:</span>
+                            <span class="text-yellow-700">Zero Rate of Change ($m = 0$)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overflow-x-auto">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Month (x)</th>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-yellow-50">
+                                    <th>Slots (y)</th>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                    <td>10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Neighborhood C -->
+            <section class="section-card p-6 border-t-4 border-red-500">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-slate-700">Neighborhood C: Declining Resources</h3>
+                    <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tag-decline">Priority: Urgent Action</span>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <p class="mb-4 text-slate-600">This region shows a significant reduction in available slots per month.</p>
+                        <div class="bg-slate-50 p-4 rounded-lg border border-dashed border-slate-300 text-center mb-4">
+                            <span class="text-slate-500 italic">Model:</span> 
+                            <span class="font-mono text-xl ml-2">$y = -2x + 10$</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-sm">
+                            <span class="font-semibold">Mathematical Feature:</span>
+                            <span class="text-red-700">Negative Rate of Change (Slope = -2)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overflow-x-auto">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Month (x)</th>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-red-50">
+                                    <th>Slots (y)</th>
+                                    <td>10</td>
+                                    <td>8</td>
+                                    <td>6</td>
+                                    <td>4</td>
+                                    <td>2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-slate-400 text-sm border-t pt-6 pb-12">
+            <p>© 2024 Regional Government Health Analytics Division</p>
+            <p>For educational use only. Criterion B: Investigating Patterns | Criterion C: Communicating in Mathematics</p>
+        </footer>
+
+    </main>
+
+    <!-- MathJax for rendering equations -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
